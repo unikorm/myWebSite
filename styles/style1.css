@@ -1,3 +1,27 @@
 html {
-    background: #EB206D;
+    background: #EDF5E1;
+}
+
+body {
+    background: #5CDB95;
+}
+
+.menu-bar {
+    background: #379683;
+}
+
+.main-block {
+    background: #8EE4AF;
+}
+
+.my-work {
+    background: #8EE4AF;
+}
+
+.work-list {
+    background: #5CDB95;
+}
+
+.my-skills {
+    background: #8EE4AF;
 }
