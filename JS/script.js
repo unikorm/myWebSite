@@ -33,7 +33,7 @@
 
     //uloha number 9
    
-$(function(){
+/*$(function(){
     var image = $("img"); //toto najde img element
 
     //na to, aby na elementy fungovali hodnoty "left", position musi byt iny ako static
@@ -84,7 +84,9 @@ function vratCislo(uno){
 
 var vrateneCislo = vratCislo(uno);
 
-console.log(vrateneCislo); 
+console.log(vrateneCislo); */
+
+
 
 
 
