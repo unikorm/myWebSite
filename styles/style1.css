@@ -25,3 +25,8 @@ body {
 .my-skills {
     background: #8EE4AF;
 }
+
+img {
+    position: relative;
+}
+
