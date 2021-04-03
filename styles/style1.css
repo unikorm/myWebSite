@@ -30,3 +30,11 @@ img {
     position: relative;
 }
 
+.oznaceny {
+    color: red;
+    background: pink;
+}
+
+.selected {
+    background: powderblue;
+}
