@@ -119,7 +119,7 @@ $(function() {
 });
 
 
-
+*/
 
 
 $(function() {
@@ -137,7 +137,7 @@ $(function() {
     //copy.after( $("<h1>ja tiez mam najvacsi... heading</h1>"));   toto tiez
     //$("<h1>ja mam mozno tiez</h1>").insertBefore( copy );    to iste akurat z opacneho konca zobrane
     
-    list.find("dd").hide();
+    /*list.find("dd").hide();
     list.find("dt").on("click", function(e) {
         $(this).next().slideToggle(1000)
                .siblings("dd").slideUp(500);
@@ -147,28 +147,117 @@ $(function() {
         var newContent = $(this).text() + $(this).next().text();
         copy.append( newContent + "hr" );     //tuto uz pridavame vybrany element do dalsieho elementu aby sa tam zobrazil
                                        //namiesto text(ten da iba vybrany content) dam append(to prida uz k existujucemu dalsi)
-        e.preventDefault();            //opak append je prepend, ten dany element da na vrch
-    })
-});  */
+                                        //opak append je prepend, ten dany element da na vrch
+
+        
+        $(this).add( ($(this).next()) )
+               .clone(true)
+               .appendTo(list);
+
+        e.preventDefault();       
+    });*/
+
+    var ul = $(".listTest");
+    ul.find("li").on("click", function() {
+        ul.append("<li>ja som tu novx</li>");
+    });
+
+    var galery = $(".gallery");
+    galery.find("img").css({
+        opacity: .5                      //toto by malo byt riesene skor cez css
+    })/*.on("mouseenter", function() {
+        $(this).fadeTo(400, 1);
+    }).on("mouseleave", function() {
+        $(this).fadeTo(400, .5);
+    });*/
+    /*.on("mouseenter mouseleave", function(event) {      //toto je viac programatorsky sposob cez podmienku
+        if ( event.type == "mouseenter") $(this).fadeTo(400, 1);
+        else $(this).fadeTo(400, .5);
+    }) */
+    .on("mouseenter mouseleave", function(event) {
+        var opacity = event.type === "mouseenter" ? 1 : .5;
+        $(this).stop().fadeTo(200, opacity);
+    });
+
+
+    //lightbox
+    
+
+
+    //uloha 13, prva cast, opisana so vzoru, nevedel som to
+
+    var kocka = $(".kocka").find("img");
+
+   $(document).on("keydown", function(event) {
+
+    switch (event.which) {
+        case 87: //up
+           kocka.css({ top: "-=15" });
+           break;
+        case 65: //left
+           kocka.css({ left: "-=15" });
+           break;
+        case 68: //right
+           kocka.css({ left: "+=15" });
+           break;
+        case 83: //down
+           kocka.css({ top: "+=15" });
+           break; 
+    };
+
+   })
+
+   //uloha 13, druha cast
+
+
+        
+        
+
+   
+
+
+
+
+});  
 
 
 
 //uloha number 12
 
 
-$(function() {
+/*$(function() {
+
     var image = $(".dickhead"); //toto najde img element
     var load = $(".loading"); //toto najde krutiace koliesko
+    var siteHeight = $("body").width();
 
+    load.hide();
     //na to, aby na elementy fungovali hodnoty "left", position musi byt iny ako static
     image.css({ position: "relative"});
-    load.hide();
     //toto je komplikovanejsia verzia, musime nan kliknut a az potom poleti
     image.on("click", function(){
-        image.animate({ left: $(image).width()}, 2000);
-        load.show();
+        load.fadeIn(); //hned po kliknuti sa koliesko zobrazi
+        image.animate({ left: ( siteHeight - $(image).width() ) }, 2000, function(){
+            //po skonceni tejto animacie load skryjeme
+            load.fadeToggle();
+        });
+        
 
     });
-    var siteHeight = $("body").height();
+    var siteHeight = $("body").width();
     //console.log(siteHeight);
-})
+
+    //druha cas ulohy s setTimeout
+    image.on("contextmenu", function(event) {
+        load.fadeIn();
+        $(this).animate({ left: ( siteHeight - $(image).width() ) }, 2000);
+        //setTimeout spusti casovac
+        //po uvedenej dobe odpali funkciu, skryje load
+        setTimeout(function() {
+            load.fadeOut();
+        }, 4000);
+
+        //preventDefault, pretoze ked kliknes pravym na prvok tak sa obycajne otvoria moznosti
+        event.preventDefault();
+    })
+}) */
