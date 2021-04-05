@@ -174,24 +174,92 @@ $(function() {
         if ( event.type == "mouseenter") $(this).fadeTo(400, 1);
         else $(this).fadeTo(400, .5);
     }) */
-    .on("mouseenter mouseleave", function(event) {
-        var opacity = event.type === "mouseenter" ? 1 : .5;
-        $(this).stop().fadeTo(200, opacity);
+    .on("mouseenter mouseleave", function(event) {   // do podmienok na co ma reagovat mozeme ako tu dat aj viac argumentov(alebo nwm ako sa to vola)
+        var opacity = event.type === "mouseenter" ? 1 : .5;  //toto je ternarny operator
+        $(this).stop().fadeTo(200, opacity);     //toto zabezpecuje aby zmenil priehladnost pri prechode mysou
     });
 
 
     //lightbox
+
+    var bx = $(".lightbox");  // vytiahol som si skupinu obrazkov, dal som ich pod jeden div
+    var overlay = $("<div/>", { id: "overlay" });  // vytvoril som prazdny div s id overlay
+        overlay.appendTo("body").hide(); // dal som ho na body a hned aj skryl
+
+    bx.find("a").on("click", function(event) {  // najde elementy a pod tou skupinou
+        var href = $(this).attr("href"),   // attr sluzi na vytiahnutie hodnoty nejakeho atributu
+            imege = $("<img>", { src: href, alt: "idk"});  // tuto hodnotu mame ulozenu a dali sme ju tu do noveho img elementu
+            overlay.html( imege )  // html zobere element a show ho zobrazi
+                   .show();
+        
+        //overlay.show();  // pridal som dalsi prazdny div element do body
+        event.preventDefault();  // zabezpecy aby neurobilo otvorenie linku, kedze to je default 
+    });
+
+    overlay.on("click", function() {  // pridanie lisenera na cely dokument, presnejsie na overlay element
+        overlay.hide();    // tento element (this) zmizne, na kliknutie na document, teda kdekolvek na stranku
+        
+
+    });
+    $(document).on("keyup", function(event) {
+        if ( event.which === 27) overlay.hide();  // ked stalacim esc (27) tak overlay zmizne
+    });
+
+    // scrollovanie
+
+    var menu = $(".work-list"),  // vytiahne ul list s linkami ked na ktore klikneme sa presuneme na tu sekciu
+        menuLinks = menu.find("a"); // vytiahneme presne dany link
+
+    menuLinks.on("click", function(event) {
+        //console.dir( this );
+        //console.dir( $(this) );
+        var id = this.hash;
+        $("html, body").animate( { scrollTop: $(id).offset().top }, 1000, function() {
+            event.preventDefault();  // zabranime default nastaveniu                                                                              
+            window.location.hash = id;  // zobrazi hash v url adrese
+        }); // vezmeme celu stranku (html, body -> tam moze byt takto aj viac elementov), animujeme 
+                                                                                     // offset znamena ze zobere hodnotu top a left od vrchu stranky( v totmto pripade iba top )
+                                                                                    // this.hash je id daneho elementu, ak nejaky ma
+                                                                                    // scrollTop znamena metodu do ktorej mozeme dat cislo a o to cislo sa stranka od vrchu posunie dole
     
+    }); 
+    
+    // back to top
+
+    var backToTop = $("<a>", {       // vytvorenie noveho a lementu na stranke
+        class: "backTop",              // urcenie jeho classu
+        html: '<img src="photo/redkocka.svg" alt="idk">'     // a realny html kod, ktory ma v nom byt
+    });
+
+    backToTop
+        .hide()
+        .appendTo("body")             // hned ho skryjeme, pripneme na body...
+        .on("click", function() {
+            $("html, body").animate({ scrollTop: 0 });         // a na click sa vyskrolujeme na vrch, to zabezpeci scrollTopp nastavena na 0
+        });
+
+    var win = $(window);     // odchytime si cely window
+    win.on("scroll", function() {           // a teraz na akt skrolovania si nastavime podmienku ak okno(window) ma scrollTop viac or rovne 500 
+       if ( win.scrollTop() >= 500 ) backToTop.show();   // backToTop sa ukaze inak ak menej tak zmizne
+       else backToTop.hide();
+    });
+
+
+                                                                              
+
+
+
+
 
 
     //uloha 13, prva cast, opisana so vzoru, nevedel som to
 
-    var kocka = $(".kocka").find("img");
+    var kocka = $(".kocka").find("img");   // vytiahnem si dany obrazok do variable
 
-   $(document).on("keydown", function(event) {
+   $(document).on("keydown", function(event) {   // tuto sa da lisener na cely dokument na keydown
 
-    switch (event.which) {
-        case 87: //up
+    switch (event.which) {          // event vytiahne hodnotu klavesi ktore sa klikne a odchyti sa , to switch je lepsia forma pre podmienky ako if a else a pod
+        case 87: //up               // v case ze sa event rovna 87 spravi kocka pohyb
            kocka.css({ top: "-=15" });
            break;
         case 65: //left
