@@ -1,3 +1,42 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+footer,
+header,
+main,
+section {
+	display: block;
+}
+
+html {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0;
+	padding: 1em;
+}
+
+.container:before,
+.container:after {
+	content: " ";
+	display: table;
+}
+
+.container:after {
+	clear: both;
+}
+
+.container:before,
+.container:after {
+	content: " ";
+	display: table;
+}
+
+.container:after {
+	clear: both;
+}
+
 html {
     background: #EDF5E1;
 }
@@ -24,4 +63,82 @@ body {
 
 .my-skills {
     background: #8EE4AF;
+}
+
+.aboutMe article{
+    background: #F3B9B2;
+}
+
+footer {
+    background: #379683;
+}
+
+.myAds {
+    background: #8EE4AF;
+}
+
+
+body {
+    padding: .5em;
+    border-radius: 1.5em;
+}
+
+.menu-bar {
+    padding: .5em;
+    border-radius: 1em;
+    margin: .5em;
+}
+
+.main-block {
+    padding: 1em;
+    border-radius: 1em;
+    margin: .5em;
+}
+
+.my-work {
+    padding: .5em;
+    margin: .5em;
+    border-radius: 1em;
+}
+
+.work-list {
+    padding: .5em;
+    margin: .5em;
+    border-radius: .5em;
+}
+
+.my-skills {
+    padding: .5em;
+    margin: .5em;
+    border-radius: .5em;
+}
+
+.aboutMe article {
+    margin: .5em;
+    padding: .5em;
+    border-radius: .5em;
+}
+
+footer {
+    padding: .5em;
+    margin: .5em;
+    border-radius: .5em;
+}
+.myAds {
+    padding: .5em;
+    margin: .5em;
+    border-radius: .5em;
+}
+
+
+
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style-type: none;
 }
