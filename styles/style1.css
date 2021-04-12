@@ -14,7 +14,7 @@ section {
 html {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	margin: 0;
-	padding: 1em;
+	padding: .5em;
 }
 
 .container:before,
@@ -38,107 +38,34 @@ html {
 }
 
 html {
-    background: #EDF5E1;
+    background: #943B5E;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-    background: #5CDB95;
-}
-
-.menu-bar {
-    background: #379683;
-}
-
-.main-block {
-    background: #8EE4AF;
-}
-
-.my-work {
-    background: #8EE4AF;
-}
-
-.work-list {
-    background: #5CDB95;
-}
-
-.my-skills {
-    background: #8EE4AF;
-}
-
-.aboutMe article{
-    background: #F3B9B2;
-}
-
-footer {
-    background: #379683;
-}
-
-.myAds {
-    background: #8EE4AF;
-}
-
-
-body {
-    padding: .5em;
-    border-radius: 1.5em;
-}
-
-.menu-bar {
-    padding: .5em;
-    border-radius: 1em;
-    margin: .5em;
-}
-
-.main-block {
-    padding: 1em;
-    border-radius: 1em;
-    margin: .5em;
-}
-
-.my-work {
-    padding: .5em;
-    margin: .5em;
-    border-radius: 1em;
-}
-
-.work-list {
-    padding: .5em;
-    margin: .5em;
-    border-radius: .5em;
-}
-
-.my-skills {
-    padding: .5em;
-    margin: .5em;
-    border-radius: .5em;
-}
-
-.aboutMe article {
     margin: .5em;
     padding: .5em;
-    border-radius: .5em;
 }
 
-footer {
-    padding: .5em;
-    margin: .5em;
-    border-radius: .5em;
-}
-.myAds {
-    padding: .5em;
-    margin: .5em;
-    border-radius: .5em;
+header {
+    background: rgba(216, 78, 85, .22);
+    border-radius: 2em;
+    padding: 2em;
+    margin: 1em;
+
 }
 
-
-
-
-
-a {
-    text-decoration: none;
-    color: black;
+h1,
+h4,
+p {
+    color: #FDAB72;
+    font-family: New Tegomin, Arial, Helvetica, sans-serif;
 }
 
-li {
-    list-style-type: none;
+main {
+    background: rgba(216, 78, 85, .22);
+    border-radius: 2em;
+    padding: 2em;
+    margin: 1em;
 }
