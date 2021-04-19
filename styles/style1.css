@@ -5,7 +5,7 @@
 }
 
 html {
-    background: #e3c9ceff;
+    background: #ffd9cf;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -13,8 +13,7 @@ html {
 }
 
 body {
-    background: no-repeat center url("../photo/main_title.png");
-    margin: .5em;
+    background: #8da47e;
     border-radius: .9em;
     height: 96%;
     width: 98%;
@@ -25,10 +24,8 @@ body {
 }
 
 header {
-    background: rgba(180, 219, 188, .2);
-    margin: .4em;
-    margin-right: 2em;
-    margin-bottom: 0em;
+    background: rgba(221, 242, 244, .1);
+    margin: 0em 2em 0em 0em;
     padding: .9em;
     border-radius: .9em;
     width: 45%;
@@ -39,9 +36,7 @@ header {
 }
 
 main {
-    background: rgba(180, 219, 188, .2);
-    margin: .4em;
-    margin-bottom: 0em;
+    background: rgba(235, 150, 170, .19);
     padding: .9em;
     border-radius: .9em;
     width: 45%;
@@ -52,41 +47,44 @@ main {
 }
 
 footer {
-    background: rgba(180, 219, 188, .2);
-    margin: .5em;
-    margin-top: 0em;
+    background: rgba(244, 200, 21, .15);
     padding: .5em;
-    margin-top: .3em;
     border-radius: .9em;
-    width: 97%;
+    width: 95%;
     height: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 
-h1,
-h4,
-p,
-a,
-li {
+h1, h4, p, a, li {
     font-family: "New Tegomin", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(60, 213, 233);
+    color: #a15d98;
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 3.5em;
     line-height: 1em;
 }
 
 h4 {
-    font-size: 1.5em;
+    font-size: 1.75em;
 }
 
-a {
-    text-decoration: none;
+.contact {
+    margin: 0em 0em .3em .3em;
 }
 
 li {
     list-style: none;
+    line-height: 1.4em;
+    font-size: 1.1em;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.2em;
 }
 
 
