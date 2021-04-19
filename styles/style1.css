@@ -1,8 +1,12 @@
+/* general settings */
+
 * {
     margin: 0em;
     padding: 0em;
     box-sizing: border-box;
 }
+
+/* settings of main block of website */
 
 html {
     background: #ffd9cf;
@@ -34,6 +38,7 @@ header {
     justify-content: flex-start;
     align-items: flex-end;
     overflow: hidden;
+    position: relative;
 }
 
 main {
@@ -59,6 +64,8 @@ footer {
 }
 
 
+/* settings of fonts */
+
 h1, h4, p, a, li {
     font-family: "New Tegomin", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #a15d98;
@@ -71,10 +78,7 @@ h1 {
 
 h4 {
     font-size: 1.75em;
-}
-
-.contact {
-    margin: 0em 0em .3em .3em;
+    line-height: 1em;
 }
 
 li {
@@ -87,6 +91,34 @@ a {
     text-decoration: none;
     font-size: 1.2em;
 }
+
+
+/* setting of individual sections */
+
+
+/* settings of header block */ 
+
+.my_photo img {
+    height: 100%;
+    opacity: .4;
+    position: absolute;
+    bottom: -4em;
+    right: -3em;
+
+}
+
+
+/* settings of main block */
+
+
+
+
+/* settings of footer block */
+
+.contact {
+    margin: 0em 0em .3em .3em;
+}
+
 
 
 
