@@ -3,21 +3,21 @@
 * {
     margin: 0em;
     padding: 0em;
-    box-sizing: border-box;
+    box-sizing: border-box;   /* zakladne nastavenia aby som si dane elementy prisposobil samostatne a nespoliehal sa na default hodnoty */
 }
 
 /* settings of main block of website */
 
 html {
-    background: #ffd9cf;
+    background: #edf5e1;
     height: 100%;
-    display: flex;
+    display: flex;  /* flex princip vyriesil moj problem s rozclenenim a celkovou respozivitou webu, je lahka manipulacia s jednotlivymi blokmy a elementamy */
     justify-content: center;
     align-items: center;
 }
 
 body {
-    background: #8da47e;
+    background: #5cdb95;
     border-radius: .9em;
     height: 96%;
     width: 98%;
@@ -28,7 +28,7 @@ body {
 }
 
 header {
-    background: rgba(221, 242, 244, .1);
+    background: rgba(237, 245, 225, .15);
     margin: 0em 2em 0em 0em;
     padding: .9em;
     border-radius: .9em;
@@ -42,7 +42,7 @@ header {
 }
 
 main {
-    background: rgba(235, 150, 170, .19);
+    background: rgba(237, 245, 225, .15);
     padding: .9em;
     border-radius: .9em;
     width: 45%;
@@ -53,11 +53,11 @@ main {
 }
 
 footer {
-    background: rgba(244, 200, 21, .15);
+    background: rgba(237, 245, 225, .15);
     padding: .5em;
-    border-radius: .9em;
+    border-radius: .9em;  /* vsetko v em jednotkach aby sa pri pripadnom zvacseny screen-u uzivatelom elementy prisposobili */
     width: 95%;
-    height: 20%;
+    height: 20%;  /* a v % cele bloky aby sa automaticky vypocitala ich velkost pri responzivnom dizajne a zmena velkosti screen-u */
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
@@ -67,8 +67,8 @@ footer {
 /* settings of fonts */
 
 h1, h4, p, a, li {
-    font-family: "New Tegomin", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #a15d98;
+    font-family: "New Tegomin", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  /* je to pekny font, ma volnu licenciu na google fontoch */
+    color: #05386b;
 }
 
 h1 {
@@ -98,14 +98,24 @@ a {
 
 /* settings of header block */ 
 
-.my_photo img {
-    height: 100%;
-    opacity: .4;
-    position: absolute;
-    bottom: -4em;
-    right: -3em;
 
+.my_photo {
+    z-index: 2;
 }
+
+.name {
+    z-index: 10;  /* tieto z-indexi riesia problem ked sa zmensi screen tak image je nad h1 a h4, vacsi z-index zabezpeci ze image bude pod h1 a h4 */
+}
+
+.my_photo img {
+    height: 95%;
+    opacity: .5;
+    position: absolute;  /* pre presnu kontrolu image elementu som zadal absolutne hodnoty aby som ho mohol kontrolovat s rohu elementu */
+    bottom: -40px;  /* pixeli viem lepsie kontrolovat skr to ze na pevno bude zobrazovat iba to co chcem, em hodnoty vie pouzivatel upravit a moze zobrazit co nechcem */
+    right: -50px;  /* tuto podobne nechcem pouzivatem dat na vyber */
+}
+
+
 
 
 /* settings of main block */
