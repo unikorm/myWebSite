@@ -59,7 +59,7 @@ footer {
     width: 95%;
     height: 20%;  /* a v % cele bloky aby sa automaticky vypocitala ich velkost pri responzivnom dizajne a zmena velkosti screen-u */
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: flex-end;
 }
 
@@ -83,13 +83,17 @@ h4 {
 
 li {
     list-style: none;
-    line-height: 1.4em;
-    font-size: 1.1em;
+    line-height: 1.2em;
+    font-size: .9em;
 }
 
 a {
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1em;
+}
+
+.skills {
+    color: #3b3e3d;
 }
 
 
