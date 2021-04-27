@@ -140,7 +140,7 @@ a {
 
 /* responzivita */
 
-/* responzivita image elementov */
+/* responzivita image elementovgit status */
 
 @media screen and ( max-width: 90.5em ) {
     .my_photo img {
@@ -152,5 +152,35 @@ a {
     .my_photo img {
         height: 89%;
         right: -70px;
+    }
+}
+
+@media screen and ( max-width: 55em ) {
+    .my_photo img {
+        height: 95%;
+        right: -50px;
+    }
+}
+
+/* responzivita main blocks */
+
+
+@media screen and ( max-width: 73em ) {
+    html {
+        display: block;
+    }
+
+    body {
+        display: block;
+        height: auto;
+        width: auto;
+    }
+
+    header, main, footer {
+        width: auto;
+    }
+
+    .my_photo img {
+        position: relative;
     }
 }
