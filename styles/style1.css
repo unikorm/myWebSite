@@ -172,12 +172,20 @@ a {
     }
 }
 
-    @media screen and ( max-width: 35em ) {
-        .my_photo img {
-            height: 70%;
-            right: -75px;
-            bottom: -15px;
-        }
+@media screen and ( max-width: 50em ) {
+    .my_photo img {
+        height: 79%;
+        right: -65px;
+        bottom: -15px;
+    }
+}
+
+@media screen and ( max-width: 35em ) {
+    .my_photo img {
+        height: 70%;
+        right: -78px;
+        bottom: -15px;
+    }
 }
 
 
@@ -226,7 +234,7 @@ a {
     }
 }
 
-@media screen and ( max-width: 35em ) {
+@media screen and ( max-width: 50em ) {
     header {
         align-items: flex-start;
     }
