@@ -59,7 +59,7 @@ footer {
     width: 95%;
     height: 20%;  /* a v % cele bloky aby sa automaticky vypocitala ich velkost pri responzivnom dizajne a zmena velkosti screen-u */
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-end;
 }
 
@@ -116,7 +116,7 @@ a {
     opacity: .6;
     position: absolute;  /* pre presnu kontrolu image elementu som zadal absolutne hodnoty aby som ho mohol kontrolovat s rohu elementu */
     bottom: -40px;  /* pixeli viem lepsie kontrolovat skr to ze na pevno bude zobrazovat iba to co chcem, em hodnoty vie pouzivatel upravit a moze zobrazit co nechcem */
-    right: -50px;  /* tuto podobne nechcem pouzivatem dat na vyber */
+    right: -70px;  /* tuto podobne nechcem pouzivatem dat na vyber */
 }
 
 
@@ -146,22 +146,39 @@ a {
 /* responzivita */
 
 
+/* responzivita mojho portretu */
 
-/* responzivita image elementovgit status */
 
-@media screen and ( max-width: 90.5em ) {
+@media screen and ( max-width: 85em ) {
     .my_photo img {
-        right: -60px;
+        height: 91%;
+        right: -85px;
     }
 }
 
 @media screen and ( max-width: 73em ) {
     .my_photo img {
-        height: 89%;
-        right: -70px;
+        height: 95%;
+        right: -30px;
+        bottom: -10px;
     }
 }
 
+@media screen and ( max-width: 60em ) {
+    .my_photo img {
+        height: 91%;
+        right: -45px;
+        bottom: -15px;
+    }
+}
+
+    @media screen and ( max-width: 35em ) {
+        .my_photo img {
+            height: 70%;
+            right: -75px;
+            bottom: -15px;
+        }
+}
 
 
 
@@ -172,13 +189,12 @@ a {
     * {
         margin: 0em;
         padding: 0em;
-        box-sizing: border-box; 
+        box-sizing: border-box;
     }
 
     html {
         display: flex;
-        justify-content: center;
-        align-items: flex-start;
+        height: auto;
     }
 
     body {
@@ -186,6 +202,7 @@ a {
         width: 97%;
         display: flex;
         margin-top: 1em;
+        margin-bottom: 1em;
     }
 
     header, main, footer {
@@ -207,12 +224,16 @@ a {
         margin-bottom: 1.5em;
         height: 10em;
     }
+}
 
-    .my_photo img {
-        height: 95%;
-        position: absolute;
-        right: 0px;
-        bottom: 0px;
-
+@media screen and ( max-width: 35em ) {
+    header {
+        align-items: flex-start;
     }
+
+    .contact {
+        margin: 0em 0em .1em .1em;
+    }
+
+
 }
