@@ -174,7 +174,7 @@ a {
 
 @media screen and ( max-width: 50em ) {
     .my_photo img {
-        height: 79%;
+        height: 85%;
         right: -65px;
         bottom: -15px;
     }
@@ -182,8 +182,8 @@ a {
 
 @media screen and ( max-width: 35em ) {
     .my_photo img {
-        height: 70%;
-        right: -78px;
+        height:78%;
+        right: -60px;
         bottom: -15px;
     }
 }
@@ -237,6 +237,11 @@ a {
 @media screen and ( max-width: 50em ) {
     header {
         align-items: flex-start;
+        height: 35em;
+    }
+
+    main {
+        height: 50em;
     }
 
     .contact {
