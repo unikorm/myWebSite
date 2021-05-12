@@ -54,13 +54,13 @@ main {
 
 footer {
     background: rgba(237, 245, 225, .15);
-    padding: .5em;
+    padding: .5em 3em .5em 3em;
     border-radius: .9em;  /* vsetko v em jednotkach aby sa pri pripadnom zvacseny screen-u uzivatelom elementy prisposobili */
     width: 95%;
     height: 20%;  /* a v % cele bloky aby sa automaticky vypocitala ich velkost pri responzivnom dizajne a zmena velkosti screen-u */
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -129,8 +129,28 @@ a {
 
 /* settings of footer block */
 
+.myContact {
+
+}
+
 .contact {
     margin: 0em 0em .3em .3em;
+}
+
+.clickGame {
+    height: 95%;
+    display: flex;
+    align-items: center;
+}
+
+.clickGame a {
+    display: flex;
+    align-items: center;
+    height: 90%;
+}
+
+.clickGame a img {
+    height: 89%;
 }
 
 
@@ -232,6 +252,8 @@ a {
         margin-bottom: 1.5em;
         height: 10em;
     }
+
+
 }
 
 @media screen and ( max-width: 50em ) {
@@ -246,6 +268,10 @@ a {
 
     .contact {
         margin: 0em 0em .1em .1em;
+    }
+
+    .clickGame a img {
+        height: 80%;
     }
 
 
