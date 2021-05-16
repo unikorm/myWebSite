@@ -115,7 +115,7 @@ a {
     height: 95%;
     opacity: .6;
     position: absolute;  /* pre presnu kontrolu image elementu som zadal absolutne hodnoty aby som ho mohol kontrolovat s rohu elementu */
-    bottom: -40px;  /* pixeli viem lepsie kontrolovat skr to ze na pevno bude zobrazovat iba to co chcem, em hodnoty vie pouzivatel upravit a moze zobrazit co nechcem */
+    bottom: -40px;  /* pixeli viem lepsie kontrolovat skrz to ze na pevno bude zobrazovat iba to co chcem, em hodnoty vie pouzivatel upravit a moze zobrazit co nechcem */
     right: -70px;  /* tuto podobne nechcem pouzivatem dat na vyber */
 }
 
@@ -129,9 +129,6 @@ a {
 
 /* settings of footer block */
 
-.myContact {
-
-}
 
 .contact {
     margin: 0em 0em 0em 0em;
@@ -291,5 +288,5 @@ a {
         margin: 0;
     }
 
-    
+
 }
