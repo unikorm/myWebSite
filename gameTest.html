@@ -31,22 +31,32 @@
         const canvas = document.querySelector("canvas");
         const ctx = canvas.getContext("2d");
 
+        // game
+
         // player
         const snakeSize = 50;
-        let snakeSpeed = 5;
+        let snakeSpeed = snakeSize;
         let snakePosX = 0;
-        let snakePosY = canvas.height / 2 - snakeSize / 2;
+        let snakePosY = canvas.height / 2;
 
         let velocityX = 0;
         let velocityY = 0;
 
+        const titleCountX = canvas.width / snakeSize;
+        const titleCountY = canvas.height / snakeSize;
+
+        // food
+        let foodPosX = 0;
+        let foodPosY = 0;
+
         // loop
         function gameLoop() {
             drawStuff()
-            moveStuff()
-            requestAnimationFrame(gameLoop);
+            //moveStuff()
+            setTimeout(gameLoop, 1000 / 15);
         }
 
+        resetFood();
         gameLoop();
 
 
@@ -56,18 +66,23 @@
         snakePosX += snakeSpeed * velocityX;
         snakePosY += snakeSpeed * velocityY;
 
-        //wall collision
-        if ( snakePosX > canvas.width) {
+        // wall collision
+        if ( snakePosX > canvas.width - snakeSize) {
             snakePosX = 0;
         }
-        if ( snakePosX < 0 - snakeSize ) {
+        if ( snakePosX < 0 ) {
             snakePosX = canvas.width;
         }
-        if ( snakePosY > canvas.height ) {
+        if ( snakePosY > canvas.height - snakeSize ) {
             snakePosY = 0;
         }
-        if ( snakePosY < 0 - snakeSize ) {
+        if ( snakePosY < 0 ) {
             snakePosY = canvas.height;
+        }
+
+        // food colision
+        if ( snakePosX === foodPosX && snakePosY === foodPosY ) {
+            resetFood();
         }
 
         } // the end of moveStuff function
@@ -79,6 +94,12 @@
             // background
             rectangle("#258", 0, 0, canvas.width, canvas.height);
 
+            // grid
+            drawGrid()
+
+            // food
+            rectangle("yellow", foodPosX, foodPosY, snakeSize, snakeSize)
+
             // snake
             rectangle("black", snakePosX, snakePosY, snakeSize, snakeSize);
 
@@ -88,6 +109,12 @@
         function rectangle( color, x, y, width, height ) {
             ctx.fillStyle = color;
             ctx.fillRect(x, y, width, height);
+        }
+
+        // randomize food position
+        function resetFood() {
+            foodPosX = Math.floor(Math.random() * titleCountX) * snakeSize;
+            foodPosY = Math.floor(Math.random() * titleCountY) * snakeSize;
         }
 
 
@@ -119,6 +146,21 @@
                     }
                 break;
             }
+        }
+
+        // grid
+        function drawGrid() {
+            for ( let i = 0; i < titleCountX; i++ ) {
+                for ( let j = 0; j < titleCountY; j++ ) {
+                    rectangle( 
+                        "#fff", 
+                        snakeSize * i,
+                        snakeSize * j,
+                        snakeSize - 1,
+                        snakeSize - 1
+                    );
+                }
+            }   
         }
 
     </script>
