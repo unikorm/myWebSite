@@ -7,22 +7,31 @@
 
 $(function() {
         var input = $("#clickToGame");
-        var screen = $("body");
-        var gameCentre = $("<div/>", { id: "gameCentre"});
-                gameCentre.appendTo("body").hide();
-        input.on("click", function() {
-                screen.animate({
-                        opacity: ".5",
-                        width: "99%",
-                        height: "95%"
-                }, 500 );
-                gameCentre.show(600);
+        var gameCentre = $("#gameCentre");
+                         gameCentre.hide();
+        var gameIntro = $("#gameIntro");
+                         gameIntro.hide();
+
+        input.on("click", function(event) {
+                openGame();
+                openGameMenu();
                 event.preventDefault();
         });
 
+        function openGame(){
+                gameCentre.show(700);
+        };
+
+        function openGameMenu(){
+                setTimeout( function() {
+                        gameIntro.show(400);
+                }, 700);
+        }
+
+
         $(document).on("keyup", function(event) {
-                if (event.which === 27) gameCentre.hide();
-                                        screen.animate({ opacity: 1, width: "98%", height: "96%" }, 100);
+                if (event.which === 27) gameCentre.hide(700);
+                                        gameIntro.hide(100);
         })
 
 });
