@@ -9,15 +9,20 @@ $(function() {
         //main variables
         var input = $("#clickToGame");
         var gameCentre = $("#gameCentre");
+                         $("#gameCentre").css( "visibility", "visible" );
                          gameCentre.hide();
         var gameIntro = $("#gameIntro");
-                         gameIntro.hide();
+                        $("#gameIntro").css( "visibility", "visible" )
+                        gameIntro.hide();
         var playButton = $("#playButton");
+                         $("#playButton").css( "visibility", "visible" )
+                         playButton.hide();
 
         // on click on my logo open the main menu of game
         input.on("click", function(event) {
                 openGame();
                 openGameMenu();
+                openPlayButton();
                 event.preventDefault();
         });
 
@@ -33,8 +38,14 @@ $(function() {
         // open menu of game
         function openGameMenu(){
                 setTimeout( function() {
-                        gameIntro.show(10);
+                        gameIntro.show(300);
                 }, 700);
+        };
+        // open play button on menu
+        function openPlayButton() {
+                setTimeout( function() {
+                        playButton.show(100);
+                }, 1000);
         };
 
         // open playground on click "play"
@@ -46,7 +57,8 @@ $(function() {
         // on "esc" click close the game
         $(document).on("keyup", function(event) {
                 if (event.which === 27) gameCentre.hide(700);
-                if (event.which === 27) gameIntro.hide(100);
+                if (event.which === 27) gameIntro.hide(200);
+                if (event.which === 27) playButton.hide(100);
         });
 
 });
