@@ -9,7 +9,7 @@
 /* settings of main block of website */
 
 html {
-    background: #edf5e1;
+    background: #F0D1E1;
     height: 100%;
     display: flex;  /* flex princip vyriesil moj problem s rozclenenim a celkovou respozivitou webu, je lahka manipulacia s jednotlivymi blokmy a elementamy */
     justify-content: center;
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    background: #5cdb95;
+    background: #E3ABD1;
     border-radius: .9em;
     height: 96%;
     width: 98%;
@@ -28,7 +28,6 @@ body {
 }
 
 header {
-    background: rgba(237, 245, 225, .15);
     margin: 0em 2em 0em 0em;
     padding: .9em;
     border-radius: .9em;
@@ -36,13 +35,13 @@ header {
     height: 70%;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: flex-start;
     overflow: hidden;
     position: relative;
+    border: #05386b solid;
 }
 
 main {
-    background: rgba(237, 245, 225, .15);
     padding: .9em;
     border-radius: .9em;
     width: 45%;
@@ -50,10 +49,10 @@ main {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    border: #05386b solid;
 }
 
 footer {
-    background: rgba(237, 245, 225, .15);
     padding: .5em 3em .5em 3em;
     border-radius: .9em;  /* vsetko v em jednotkach aby sa pri pripadnom zvacseny screen-u uzivatelom elementy prisposobili */
     width: 95%;
@@ -61,6 +60,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: #05386b solid;
 }
 
 
