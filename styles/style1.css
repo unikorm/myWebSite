@@ -9,7 +9,7 @@
 /* settings of main block of website */
 
 html {
-    background: #F0D1E1;
+    background: #ff8c94;
     height: 100%;
     display: flex;  /* flex princip vyriesil moj problem s rozclenenim a celkovou respozivitou webu, je lahka manipulacia s jednotlivymi blokmy a elementamy */
     justify-content: center;
@@ -17,10 +17,10 @@ html {
 }
 
 body {
-    background: #E3ABD1;
+    background: #ff8c94;
     border-radius: .9em;
-    height: 96%;
-    width: 98%;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,24 +28,22 @@ body {
 }
 
 header {
-    margin: 0em 2em 0em 0em;
     padding: .9em;
     border-radius: .9em;
-    width: 45%;
-    height: 70%;
+    width: 98%;
+    height: 10%;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    position: relative;
     border: #05386b solid;
 }
 
 main {
     padding: .9em;
     border-radius: .9em;
-    width: 45%;
-    height: 70%;
+    width: 98%;
+    height: 75%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -53,10 +51,10 @@ main {
 }
 
 footer {
-    padding: .5em 3em .5em 3em;
+    padding: .2em 1em .2em 1em;
     border-radius: .9em;  /* vsetko v em jednotkach aby sa pri pripadnom zvacseny screen-u uzivatelom elementy prisposobili */
-    width: 95%;
-    height: 20%;  /* a v % cele bloky aby sa automaticky vypocitala ich velkost pri responzivnom dizajne a zmena velkosti screen-u */
+    width: 98%;
+    height: 10%;  /* a v % cele bloky aby sa automaticky vypocitala ich velkost pri responzivnom dizajne a zmena velkosti screen-u */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,7 +66,7 @@ footer {
 
 h1, h4, p, a, li {
     font-family: "New Tegomin", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  /* je to pekny font, ma volnu licenciu na google fontoch */
-    color: #05386b;
+    color: #dcedc2 ;
 }
 
 h1 {
@@ -103,22 +101,10 @@ a {
 /* settings of header block */ 
 
 
-.my_photo {
-    z-index: 2;
-}
 
 .name {
     z-index: 10;  /* tieto z-indexi riesia problem ked sa zmensi screen tak image je nad h1 a h4, vacsi z-index zabezpeci ze image bude pod h1 a h4 */
 }
-
-.my_photo img {
-    height: 95%;
-    opacity: .6;
-    position: absolute;  /* pre presnu kontrolu image elementu som zadal absolutne hodnoty aby som ho mohol kontrolovat s rohu elementu */
-    bottom: -40px;  /* pixeli viem lepsie kontrolovat skrz to ze na pevno bude zobrazovat iba to co chcem, em hodnoty vie pouzivatel upravit a moze zobrazit co nechcem */
-    right: -70px;  /* tuto podobne nechcem pouzivatem dat na vyber */
-}
-
 
 
 
@@ -161,50 +147,6 @@ a {
 
 
 /* responzivita */
-
-
-/* responzivita mojho portretu */
-
-
-@media screen and ( max-width: 85em ) {
-    .my_photo img {
-        height: 91%;
-        right: -85px;
-    }
-}
-
-@media screen and ( max-width: 73em ) {
-    .my_photo img {
-        height: 95%;
-        right: -30px;
-        bottom: -10px;
-    }
-}
-
-@media screen and ( max-width: 60em ) {
-    .my_photo img {
-        height: 91%;
-        right: -45px;
-        bottom: -15px;
-    }
-}
-
-@media screen and ( max-width: 50em ) {
-    .my_photo img {
-        height: 85%;
-        right: -65px;
-        bottom: -15px;
-    }
-}
-
-@media screen and ( max-width: 35em ) {
-    .my_photo img {
-        height:78%;
-        right: -60px;
-        bottom: -15px;
-    }
-}
-
 
 
 /* responzivita main blocks */
