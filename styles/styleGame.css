@@ -1,0 +1,10 @@
+body {
+    background: #379683;
+    text-align: center;
+}
+
+canvas {
+    border: 3px solid honeydew;
+    border-radius: .2em;
+    margin-top: 2em;
+}
