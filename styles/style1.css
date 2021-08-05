@@ -41,7 +41,7 @@ header {
 main {
     padding: 0em;
     border-radius: .9em;
-    width: 25%;
+    width: 98%;
     height: 75%;
     display: flex;
     justify-content: center;
@@ -72,7 +72,9 @@ h1 {
     letter-spacing: .2em;
     
 }
-
+h1:last-of-type {
+    letter-spacing: 0;
+}
 h1:nth-of-type(1) {
     color: #ff8c94;
 }
@@ -120,46 +122,29 @@ a {
 
 
 
-.name {
-   z-index: 10;  /* tieto z-indexi riesia problem ked sa zmensi screen tak image je nad h1 a h4, vacsi z-index zabezpeci ze image bude pod h1 a h4 */
-   text-align: center;
-   line-height: 5em;
-}
-
-.inLineName {
-    display: inline-flex;
-}
-
-
 
 
 /* settings of main block */
 
-
+.name {
+    z-index: 10;  /* tieto z-indexi riesia problem ked sa zmensi screen tak image je nad h1 a h4, vacsi z-index zabezpeci ze image bude pod h1 a h4 */
+    text-align: center;
+    line-height: 5em;
+ }
+ 
+ .inLineName {
+    display: inline-flex;
+     text-align: center;
+ }
+ 
 
 
 /* settings of footer block */
 
 
-.contact {
+.ulcontact {
     margin: 0em 0em 0em 0em;
 }
-
-/*.clickGame {
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.clickGame a {
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-
-.clickGame a img {
-    height: 100%;
-}*/
 
 
 
@@ -220,43 +205,6 @@ a {
 
 }
 
-@media screen and ( max-width: 50em ) {
-    header {
-        align-items: flex-start;
-        height: 35em;
-    }
-
-    main {
-        height: 50em;
-    }
-
-    .contact {
-        margin: 0em 0em .1em .1em;
-    }
-
-    .clickGame a img {
-        height: 80%;
-    }
-
-    li {
-        list-style: none;
-        line-height: 1.1em;
-        font-size: .95em;
-    }
-
-
-}
-
-@media screen and ( max-width: 40em ) {
-    .myContact {
-        margin-left: -1em;
-    }
-    .contact {
-        margin: 0;
-    }
-
-
-}
 
 
 
