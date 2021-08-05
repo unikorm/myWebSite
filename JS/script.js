@@ -56,9 +56,9 @@ $(function() {
 
         // on "esc" click close the game
         $(document).on("keyup", function(event) {
-                if (event.which === 27) gameCentre.hide(700);
-                if (event.which === 27) gameIntro.hide(200);
-                if (event.which === 27) playButton.hide(100);
+                if (event.which === 27) gameCentre.hide(200);
+                                        gameIntro.hide(200);
+                                        playButton.hide(200);
         });
 
 });

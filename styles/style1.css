@@ -49,7 +49,6 @@ main {
 }
 
 footer {
-    padding: .2em 1em .2em 1em;
     border-radius: .9em;  /* vsetko v em jednotkach aby sa pri pripadnom zvacseny screen-u uzivatelom elementy prisposobili */
     width: 98%;
     height: 10%;  /* a v % cele bloky aby sa automaticky vypocitala ich velkost pri responzivnom dizajne a zmena velkosti screen-u */
@@ -99,15 +98,15 @@ h4 {
 
 li {
     list-style: none;
-    line-height: 1.25em;
-    font-size: 1em;
+    line-height: 1.2em;
+    font-size: .9em;
     font-weight: 300;
     opacity: .4;
 }
 
 a {
     text-decoration: none;
-    font-size: 1em;
+    font-size: .8em;
 }
 
 .skills {
@@ -120,7 +119,9 @@ a {
 
 /* settings of header block */ 
 
-
+    .myLogoMobile {
+        display: none;
+    }
 
 
 
@@ -129,12 +130,11 @@ a {
 .name {
     z-index: 10;  /* tieto z-indexi riesia problem ked sa zmensi screen tak image je nad h1 a h4, vacsi z-index zabezpeci ze image bude pod h1 a h4 */
     text-align: center;
-    line-height: 5em;
  }
  
  .inLineName {
     display: inline-flex;
-     text-align: center;
+    text-align: center;
  }
  
 
@@ -162,53 +162,88 @@ a {
 /* responzivita main blocks */
 
 
-@media screen and ( max-width: 73em ) {
+@media screen and ( max-width: 60em ) {
     * {
         margin: 0em;
         padding: 0em;
         box-sizing: border-box;
     }
 
-    html {
-        display: flex;
-        height: auto;
+    h1 {
+        font-size: 6em;
     }
 
-    body {
-        height: auto;
-        width: 97%;
-        display: flex;
-        margin-top: 1em;
-        margin-bottom: 1em;
+    h4 {
+        font-size: 2em;
     }
 
-    header, main, footer {
-        width: 95%;
-        margin: 0;
-        margin: .5em 0em .5em 0em;
+    li {
+        font-size: .8em;
+        line-height: 1.2em;
     }
 
-    header {
-        margin-top: 1.5em;
-        height: 40em;
+    a {
+        font-size: .8em;
+    }
+}
+
+@media screen and ( max-width: 40em ) {
+    * {
+        margin: 0em;
+        padding: 0em;
+        box-sizing: border-box;
     }
 
-    main {
-        height: 40em;
+    h1 {
+        font-size: 5em;
     }
 
-    footer {
-        margin-bottom: 1.5em;
-        height: 10em;
+    h4 {
+        font-size: 1.8em;
     }
 
+    li {
+        font-size: .7em;
+        line-height: 1.1em;
+    }
 
+    a {
+        font-size: .9em;
+    }
+
+    .myLogoBig {
+        display: none;
+    }
+
+    .myLogoMobile {
+        display: block;
+    }
+}
+
+@media screen and ( max-width: 36em ) {
+    * {
+        margin: 0em;
+        padding: 0em;
+        box-sizing: border-box;
+    }
+
+    .inLineName {
+        display: unset;
+    }
+    h1 {
+        letter-spacing: 0;
+    }
 }
 
 
 
 
 /* game settings */
+
+canvas {
+    display:none;
+    visibility: hidden;
+}
 
 #gameCentre {
     visibility: hidden;
