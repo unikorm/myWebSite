@@ -6,6 +6,10 @@
     box-sizing: border-box;   /* zakladne nastavenia aby som si dane elementy prisposobil samostatne a nespoliehal sa na default hodnoty */
 }
 
+::selection {
+    background: plum;
+}
+
 /* settings of main block of website */
 
 html {
@@ -14,6 +18,8 @@ html {
     display: flex;  /* flex princip vyriesil moj problem s rozclenenim a celkovou respozivitou webu, je lahka manipulacia s jednotlivymi blokmy a elementamy */
     justify-content: center;
     align-items: center;
+
+    cursor: alias;
 }
 
 body {
