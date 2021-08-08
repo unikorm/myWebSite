@@ -18,8 +18,10 @@ html {
     display: flex;  /* flex princip vyriesil moj problem s rozclenenim a celkovou respozivitou webu, je lahka manipulacia s jednotlivymi blokmy a elementamy */
     justify-content: center;
     align-items: center;
+}
 
-    cursor: alias;
+.cursorSVG {
+    cursor: url("../photo/circle28x28.svg"), auto;
 }
 
 body {
