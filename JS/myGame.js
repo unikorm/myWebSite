@@ -2,11 +2,7 @@
 // canvas
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
-
-// game
-const titleSize = 50;
-const tileCountX = canvas.width / titleSize;
-const tileCountY = canvas.height / titleSize;
+const canvasWidth = 
 
 
 
